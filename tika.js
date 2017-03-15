@@ -11,9 +11,10 @@
 
 var java = require('java');
 
-java.classpath.push(__dirname + '/jar/node-tika-1.13.jar');
+java.classpath.push(__dirname + '/jar/node-tika-1.14.jar');
 java.options.push('-Djava.awt.headless=true');
 java.options.push('-Xrs');
+java.options.push('-Xmx200m');
 
 var NodeTika = java.import('org.icij.nodetika.NodeTika');
 
